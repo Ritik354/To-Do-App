@@ -1,0 +1,197 @@
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        margin: 60px 20px 0 20px;
+    }
+
+    .container .stats-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form #task {
+        width: 100%;
+    }
+
+    form #add {
+        width: 100%;
+        border-radius: 20px;
+        height: 45px;
+        font-size: 24px;
+    }
+
+    .taskItem {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .taskItem .task {
+        flex-wrap: wrap;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    #number {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    .progressBar,
+    .progress {
+        height: 8px;
+    }
+
+    .icons img {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+    }
+}
+
+:root {
+    --background: #0d0d0d;              /* Dark, elegant base */
+    --secondaryBackground: #1f1f1f;     /* Slightly brighter for contrast */
+    --text: #d1f7ff;                    /* Cool neon-cyan text */
+    --purple: #005eff;                  /* Brighter, more punchy blue-purple */
+    --teal: #00ff73;                    /* Softer neon green for better contrast */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html,body{
+    background-color: var(--background);
+    color: var(--text);
+}
+.container{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    /* background-color: red; */
+}
+.container .stats-container{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border: 2px solid var(--purple);
+    border-radius: 30px;
+    gap: 50px;
+}
+.stats-container .details{
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+}
+.progressBar{
+    width: 100%;
+    background-color: white;
+    height: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.progress{
+    width: 0%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--teal);
+    transition: all .3s ease;
+}
+
+#number{
+    width: 100px;
+    height: 100px;
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+}
+form{
+    /* background-color: red; */
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+form #task{
+    flex: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: var(--secondaryBackground);
+    color: rgb(255, 255, 255);
+    border: 1px solid --purple;
+}
+
+form #add{
+    width: 50px;
+    height: 50px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+.task-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+.taskItem{
+    display: flex;
+    background-color: var(--secondaryBackground);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.taskItem .task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task input{
+    width: 20px;
+    height: 20px;
+    
+}
+.task p{
+    font-size: 15px;
+    
+}
+.completed p{
+    text-decoration: line-through;
+    color: var(--teal);
+}
+.icons img{
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+}
