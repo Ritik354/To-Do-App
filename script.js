@@ -125,11 +125,11 @@ let updateTaskList = (index) =>{
 
         listItem.innerHTML = `
         <div class="taskItem">
-                <div class="task ${task.completed ? 'completed':''}">
+                <div class="prevent-select task ${task.completed ? 'completed':''}">
                     <input type ="checkbox" class="checkbox" ${task.completed ? 'checked':''}/>
                     <p>${task.text}</p>
                 </div>
-                <div class="icons">
+                <div class="icons prevent-select">
                     <img src="./icons/edit.png" alt="edit" onClick = "editTask(${index})">
                     <img src="./icons/delete.png" alt="delete" onClick = "deleteTask(${index})">
                 </div>
